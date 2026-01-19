@@ -1,9 +1,0 @@
-streamlit
-pandas 
-matplotlib 
-seaborn 
-numpy
-psycopg2
-sqlalchemy     
-yfinance       
-supabase
