@@ -1,12 +1,7 @@
-import pandas as pd
-import seaborn as sns
 import streamlit as st
-import matplotlib
-matplotlib.use("Agg")
+import pandas as pd
 import matplotlib.pyplot as plt
-
-
-
+import seaborn as sns
 # ------------------ APP BACKGROUND COLOR ------------------
 st.markdown(
     """
@@ -26,26 +21,63 @@ st.markdown(
 )
 
 
-# ------------------ PAGE CONFIG ------------------
+import streamlit as st
+
 st.set_page_config(
-    page_title="Data Driven Stock Analysis Dashboard",
+    page_title="Data Driven Stock Analysis",
     layout="wide"
 )
 
-st.markdown(
-    """
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <h1 style='
-        text-align: center; 
-        color:#111827; 
-        font-family: "Roboto", sans-serif; 
-        font-size: 48px;
-    '>
-        📊 Data Driven Stock Analysis Dashboard
-    </h1>
-    """,
-    unsafe_allow_html=True
-)
+# -------------------------------
+# 🎨 CSS (Ribbon Color Updated)
+# -------------------------------
+st.markdown("""
+<style>
+.ribbon-container {
+    background: linear-gradient(135deg, #0050EB, #003bb3);
+    padding: 28px 30px;
+    border-radius: 14px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.35);
+    margin-bottom: 30px;
+}
+
+/* Main title */
+.ribbon-title {
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 800;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+/* Long subtitle */
+.ribbon-subtitle {
+    font-size: clamp(13px, 1.5vw, 16px);
+    color: #E6ECFF;
+    text-align: center;
+    line-height: 1.7;
+    max-width: 95%;
+    margin: auto;
+    word-break: break-word;
+}
+</style>
+""", unsafe_allow_html=True)
+
+# -------------------------------
+# 🧾 Ribbon Header
+# -------------------------------
+st.markdown("""
+<div class="ribbon-container">
+    <div class="ribbon-title">
+        📊 Data-Driven Stock Analysis
+    </div>
+    <div class="ribbon-subtitle">
+        Most Volatile Stocks • Cumulative Return • Sector Wise Performance •
+        Stock Price Correlation • Top Gainers & Losers
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
 
 
 # ------------------ LOAD DATA ------------------
